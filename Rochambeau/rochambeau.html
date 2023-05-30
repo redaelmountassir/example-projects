@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rochambeau</title>
+		<link rel="stylesheet" href="rochambeau.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="icon" type="image/x-icon" href="favicon.png" />
+		<script src="rochambeau.js"></script>
+		<script>
+			window.addEventListener('DOMContentLoaded', () => {
+				StartGame(
+					document.getElementById('rock'),
+					document.getElementById('paper'),
+					document.getElementById('scissors'),
+					document.getElementById('selection'),
+					document.getElementById('loading'),
+					document.getElementById('results'),
+					document.getElementById('message'),
+					document.getElementById('your-choice'),
+					document.getElementById('bot-choice')
+				);
+			});
+		</script>
+	</head>
+	<body>
+		<section class="disabled" id="selection">
+			<h1>Rochambeau</h1>
+			<p>Pick your choice</p>
+			<ul>
+				<li>
+					<button id="rock">
+						<span>🪨</span>
+						<h3>Rock</h3>
+					</button>
+				</li>
+				<li>
+					<button id="paper">
+						<span>📄</span>
+						<h3>Paper</h3>
+					</button>
+				</li>
+				<li>
+					<button id="scissors">
+						<span>✂️</span>
+						<h3>Scissors</h3>
+					</button>
+				</li>
+			</ul>
+		</section>
+		<section class="disabled" id="loading">
+			<h2>Rock</h2>
+			<h2>Paper</h2>
+			<h2>Scissors</h2>
+			<h2>Shoot!</h2>
+		</section>
+		<section class="disabled" id="results">
+			<div>
+				<h3>You picked</h3>
+				<span id="your-choice">🪨</span>
+			</div>
+			<div>
+				<h3>Bot picked</h3>
+				<span id="bot-choice">📄</span>
+			</div>
+			<div class="results-center">VS</div>
+			<h2 class="results-center" id="message">You won!</h2>
+		</section>
+	</body>
+</html>
