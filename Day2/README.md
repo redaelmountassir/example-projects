@@ -1,4 +1,4 @@
-### Today We Discussed:
+### Topics Used
 
 - Control Flow
 - If Statements
