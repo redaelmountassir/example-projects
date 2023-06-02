@@ -19,15 +19,18 @@ function StartGame(
 	yourChoice,
 	botChoice
 ) {
+	let selectionMade = false;
 	selectionPage.classList.remove('disabled');
 
 	rockBtn.addEventListener('click', () => select(OPTIONS.Rock));
 	paperBtn.addEventListener('click', () => select(OPTIONS.Paper));
 	scissorsBtn.addEventListener('click', () => select(OPTIONS.Scissors));
 	function select(selected) {
+		if (selectionMade) return; //No double selections
 		const botSelection = randomProperty(OPTIONS);
 		const selection = selected;
 		let message = DRAW_MESSAGE;
+		selectionMade = true;
 
 		switch (selection) {
 			case OPTIONS.Rock:
@@ -45,10 +48,8 @@ function StartGame(
 		}
 
 		selectionPage.classList.add('disabled');
-		console.log(loadingPage);
 		setTimeout(() => {
 			loadingPage.classList.remove('disabled');
-			console.log(loadingPage);
 		}, 1000);
 		setTimeout(() => {
 			resultsMessage.textContent = message;
