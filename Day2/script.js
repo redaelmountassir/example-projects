@@ -1,5 +1,6 @@
 'use strict';
 
+// Assignment 1
 window.onload = run;
 
 function run() {
@@ -16,3 +17,7 @@ function run() {
         winningMoves.appendChild(listElement);
     }
 }
+
+// Assignment 2
+const selectRandom = /* Your code */;
+window.setInterval(selectRandom, 2000);
