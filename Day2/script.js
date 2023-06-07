@@ -11,13 +11,33 @@ function run() {
         const move = moves[i];
 
         // Your code
+        const moveText = move.textContent
+        let winningMoveText = '';
+
+        switch (moveText) {
+            case "Scissors":
+                winningMoveText = "Rock"
+                break;
+            case "Rock":
+                winningMoveText = "Paper"
+                break;
+            case "Paper":
+                winningMoveText = "Scissors"
+                break;
+            }
+
     
         const listElement = document.createElement("li");
-        listElement.textContent = /* You code */;
+        listElement.textContent = winningMoveText;
         winningMoves.appendChild(listElement);
     }
 }
 
 // Assignment 2
-const selectRandom = /* Your code */;
+const selectRandom = () => {
+    const moves = ["Scissors", "Rock", "Paper"];
+    const randomIndex = selectRandom(3);
+    const randomMove = moves[randomIndex];
+    console.log(randomMove);
+};
 window.setInterval(selectRandom, 2000);
