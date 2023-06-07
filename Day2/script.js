@@ -3,8 +3,8 @@
 // Assignment 1
 window.onload = run;
 
-function run() {
-    const moves = document.getElementsByClassName("moves");
+function run() { 
+    const moves = document.getElementsByClassName("move");
     const winningMoves = document.getElementById("winning-moves");
 
     for (let i = 0; i < moves.length; i++) {
@@ -13,16 +13,21 @@ function run() {
         // Your code
         const moveText = move.textContent
         let winningMoveText = '';
+        
+        console.log(moveText);
 
         switch (moveText) {
             case "Scissors":
                 winningMoveText = "Rock"
+                console.log(winningMoveText)
                 break;
             case "Rock":
                 winningMoveText = "Paper"
+                console.log(winningMoveText)
                 break;
             case "Paper":
                 winningMoveText = "Scissors"
+                console.log(winningMoveText)
                 break;
             }
 
@@ -34,10 +39,13 @@ function run() {
 }
 
 // Assignment 2
-const selectRandom = () => {
+function selectRandom() {
     const moves = ["Scissors", "Rock", "Paper"];
-    const randomIndex = selectRandom(3);
+    const randomIndex = Math.floor(Math.random() * 3);
     const randomMove = moves[randomIndex];
     console.log(randomMove);
+    console.log(moves[0]);
 };
 window.setInterval(selectRandom, 2000);
+
+selectRandom();
