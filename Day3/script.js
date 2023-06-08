@@ -1,4 +1,5 @@
 //Assignment 2
+import Expression from './module.js';
 window.onload = run;
 
 function run() {
@@ -9,6 +10,12 @@ function run() {
 	const output = document.getElementById('output');
 
 	eqlBtn.addEventListener('click', () => {
-		// Your code
+		const valueA = parseInt(num1.value);
+		const valueB = parseInt(num2.value);
+		const operater = ops.value;
+
+		const expression = new Expression(valueA, valueB, operater);
+		const result = expression.evaluate();
+		output.textContent = `Result: ${result}`;
 	});
 }
