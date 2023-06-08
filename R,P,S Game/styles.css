@@ -1,0 +1,41 @@
+html{
+    background-color: powderblue;
+}
+
+h2{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 50px;
+}  
+
+  .wrapper img {
+    margin-bottom: 20px;
+  }
+
+  .wrapper button {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+  }
+
+p{
+    text-align: center;
+}
+
+  
