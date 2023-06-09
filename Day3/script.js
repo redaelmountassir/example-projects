@@ -9,6 +9,12 @@ function run() {
 	const output = document.getElementById('output');
 
 	eqlBtn.addEventListener('click', () => {
-		// Your code
+		const valueA = parseInt(num1.value);
+		const valueB = parseInt(num2.value);
+		const operator = ops.value;
+
+		const expression = new Expression(valueA, valueB, operator);
+		const result = expression.evaluate();
+		output.textContent = `Result: ${result}`;
 	});
 }
