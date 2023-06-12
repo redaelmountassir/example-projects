@@ -1,29 +1,39 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="styles.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="main.js" defer></script>
+
+    <div class="Calculator-grid">
+    <div class="output">
+        <div class="previous-operand"></div>
+        <div class="current-operand"></div>
+    </div>
+    <div data-previous-operand class="previous-operand"></div>
+<div data-current-operand class="current-operand"></div>
+<button data-all-clear class="span-two">AC</button>
+<button data-delete>DEL</button>
+<button data-operation>÷</button>
+<button data-number>1</button>
+<button data-number>2</button>
+<button data-number>3</button>
+<button data-operation>*</button>
+<button data-number>4</button>
+<button data-number>5</button>
+<button data-number>6</button>
+<button data-operation>+</button>
+<button data-number>7</button>
+<button data-number>8</button>
+<button data-number>9</button>
+<button data-operation>-</button>
+<button data-number>.</button>
+<button data-number>0</button>
+<button data-equals class="span-two">=</button>
+</div>
 </head>
-
 <body>
-  <div class="wrapper">
-  <div class="buttons">
-    <button class="rpsButton" value="Rock">🗿</button>
-    <button class="rpsButton" value="Paper">📄</button>
-    <button class="rpsButton" value="Scissors">✂</button>
-  </div>
-  <div class="resultContainer">
-  <div id="player-score"></div>
-  <div id="hands"></div>
-  <div id="result"></div>
-  <button id='endGameButton'>END </button>
-  </div>
-  </div>
-  
-  <script src="main.js"></script>
-</body>
 
+</body>
 </html>
